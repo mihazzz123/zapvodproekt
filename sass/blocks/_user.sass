@@ -1,0 +1,133 @@
+.user
+  &-clndr
+    position: relative
+    z-index: 2
+  &-table
+    &__wrap
+      padding-left: 0
+    & td 
+      padding: 16px
+    & td 
+      border-bottom: 1px solid #0B2E3C
+      &:last-child
+        text-align: center
+    & thead 
+      & td 
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        color: #466370
+    & tbody
+      & tr:last-child
+        & td 
+          border: none
+      & td
+        font-weight: normal
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF 
+        &:nth-child(3), &:nth-child(4)
+          color: #19B5FE
+
+.sort 
+  &-date 
+    position: absolute
+    padding: 0
+    height: 0
+    top: 0px
+    left: 0px
+    overflow: hidden
+    &__result 
+      z-index: 3
+    &__btn
+      position: relative
+    & .dhx_calendar
+      padding-top: 50px
+      border-radius: 4px
+      background: #010911
+    & .dhx_calendar-weekday
+      font-size: 12px
+      line-height: 12px
+      color: #6C7279
+    & .dhx_calendar-day, .dhx_button, .dhx_calendar-year, .dhx_calendar-month
+      font-size: 12px
+      color: #ffffff !important
+    & .dhx_calendar-action__prev
+      margin-left: auto
+    & .dhx_calendar-day:after, .dhx_calendar-day:before 
+      width: 25px
+      height: 25px
+  &-object 
+    &__btn 
+      padding-right: 40px
+      & span 
+        line-height: 24px
+      & .dropdown-menu
+        border-radius: 5px 
+        top: -2px
+        left: -1px
+        width: 240px
+        background: #010911
+        box-shadow: none
+        border: none
+        & li 
+          color: #FFFFFF
+          border: none !important
+          &:first-child:hover
+            color: #FFFFFF
+          &:hover
+            color: #6C7279
+            background: #010911
+  &-type 
+    &__btn 
+      padding-right: 40px
+      & span 
+        line-height: 24px
+      & .dropdown-menu
+        border-radius: 5px 
+        top: -2px
+        left: -1px
+        width: 320px
+        background: #010911
+        box-shadow: none
+        border: none
+        & li 
+          color: #FFFFFF
+          border: none !important
+          &:first-child:hover
+            color: #FFFFFF
+          &:hover
+            color: #6C7279
+            background: #010911
+
+
+
+.check
+  margin-left: auto
+  width: 18px
+  height: 18px
+  position: relative
+  &_active::after
+    background: #19B5FE
+    border-color: #19B5FE !important
+  &_active::before
+    content: url(../img/check.svg)
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: block
+    border-radius: 50%
+    border: 1.7px solid #244654
+  &::before
+    z-index: 1
+    position: absolute
+    top: 2px
+    left: 5px
+    width: 100%
+    height: 100%
+    display: block
+    border-radius: 50%

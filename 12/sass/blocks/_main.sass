@@ -1,0 +1,202 @@
+.info 
+  justify-content: space-between
+  &-count
+    width: 353px
+    padding-left: 15px
+    padding-right: 15px
+    position: relative
+    &__title
+      font-size: 20px
+      line-height: 23px
+      margin-bottom: 24px
+    &__count
+      font-weight: 300
+      font-size: 64px
+      line-height: 75px
+      margin-bottom: 36px
+    &__status
+      position: absolute
+      left: 55%
+      top: 80px
+      & span 
+        padding-top: 8px
+        font-weight: bold
+        font-size: 14px
+        line-height: 16px
+        color: #BD4045
+    &__line 
+      width: 322px  
+      height: 4px 
+      background: #0B2B38 
+      border-radius: 4px  
+      &-active
+        width: 60%
+        height: 4px
+        background-image: linear-gradient(90deg, rgba(55, 81, 255, 0.3) 0%, #3751FF 100%)
+        border-radius: 4px
+  &-data
+    background: #09242F
+    border-radius: 4px
+    padding: 16px 0
+    width: 740px
+    // width: 65%
+    &__block
+      flex-wrap: wrap
+    &__title
+      padding-left: 16px
+      margin-bottom: 10px
+      font-size: 20px
+      line-height: 23px
+      color: #466370
+    &__row
+      width: 100%
+    &__col
+      margin-left: 16px
+      margin-right: 16px
+      width: 50%
+      padding-top: 18px
+      padding-bottom: 8px
+      border-bottom: 1px solid #0B2E3C
+      & svg 
+        margin-right: 10px
+      &-title
+        font-size: 14px
+        line-height: 16px
+        color: #FFFFFE
+    &__val
+      margin-left: auto
+
+.main
+  padding-bottom: 32px
+  overflow: hidden
+  flex-wrap: nowrap
+  &-point
+    border-radius: 50%
+    position: absolute
+    width: 12px
+    height: 12px
+    background: linear-gradient(180deg, #7DCE7F 0%, #44B446 100%)
+    left: 31%
+    top: 57%
+    transition: 0.5s
+    transform: scale(1)
+    &_active
+      transform: scale(1.1)
+      box-shadow: 0 0 3px 1px #7DCE7F
+  &-slide
+    min-width: 100%
+    transition: transform 0.5s
+  &-title
+    padding-top: 35px
+    padding-bottom: 25px
+    font-size: 20px
+    line-height: 23px
+    color: #FFFFFE
+  &-bg
+    position: relative
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    &_1
+      background-image: url(../img/main_1.png)
+      // width: 1122px
+      width: 100%
+      height: 550px
+    &_2
+      background-image: url(../img/main_2.png)
+      // width: 1122px
+      width: 100%
+      height: 550px
+  &-block 
+    position: absolute
+    // top: 65px
+    top: 20px
+    left: 20px
+    width: 360px
+    background: #010911
+    border-radius: 4px
+    padding: 15px 15px 25px 15px
+    &__btn
+      font-weight: 400
+      display: block
+      margin-top: 16px
+      text-decoration: none
+      transition: all 0.3s
+      &:hover
+        text-decoration: underline
+    &_1
+      opacity: 0
+      transition: all 0.3s
+      z-index: -1
+    &_active
+      opacity: 1
+      z-index: 5
+    &-sec
+      background: none
+    &__title
+      font-size: 16px
+      line-height: 19px
+      color: #466370
+      padding-bottom: 25px
+    &__val
+      margin-bottom: 15px
+      & span
+        margin-left: auto
+        display: block
+      &-sec
+        cursor: pointer
+        margin-bottom: 15px
+        & span
+          width: 8px
+          height: 8px
+          border-radius: 50%
+          margin-top: 4px
+          margin-right: 15px
+        &:nth-child(2) span
+          background: #F6AD97
+          box-shadow: 0px 0px 10px rgba(246, 173, 151, 0.5)
+        &:nth-child(3) span
+          background: #CC4038
+          box-shadow: 0px 0px 10px rgba(204, 64, 56, 0.5)
+        &:nth-child(4) span
+          background: #AB060C
+          box-shadow: 0px 0px 10px rgba(171, 6, 12, 0.5)
+    &__warrning
+      padding-top: 16px
+      font-weight: 500
+      font-size: 14px
+      line-height: 16px
+      color: #BD4045
+  &-textarea
+    width: 100%
+    height: 42px
+    padding: 12px
+    background: #0B2E3C
+    border-radius: 4px
+    resize: none
+    border: none  
+    
+.footer
+  padding-bottom: 46px
+  &-link
+    transition: all 0.3s
+    cursor: pointer
+    padding: 0px 16px
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    color: #53666D
+    &-active
+      font-weight: 500
+      color: #19B5FE
+
+@media (max-width: 1440px)
+  .info-count
+    width: 300px
+    &__line
+      width: 100%
+  .info-data
+    width: auto
+    max-width: 77%
+    

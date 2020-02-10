@@ -1,0 +1,136 @@
+.sidebar
+  position: fixed
+  top: 0  
+  left: 0
+  width: 112px
+  height: 100%
+  min-height: 100vh
+  background-color: #010911
+  padding-top: 60px
+  z-index: 10
+  overflow-y: auto
+  -ms-overflow-style: none
+  overflow: -moz-scrollbars-none
+  &::-webkit-scrollbar 
+    width: 0
+  & *
+    transition: all 0.3s
+  &-show
+    width: 322px
+  &-logo
+    overflow: hidden
+    margin-bottom: 0
+    width: 0
+    height: 0
+    transition: all 0.3s
+    margin-left: 36px
+    &_active
+      // margin-bottom: 50px
+      height: 48px
+      width: 250px
+    &__img
+      width: 250px
+      height: 48px
+  &-open
+    position: absolute
+    left: 44px
+    &__icon
+      cursor: pointer
+      & rect 
+        transition: all 0.3s
+        fill: #fffffe
+        stroke: #010911
+      &:hover
+        & rect 
+          fill: #010911
+          stroke: #ffffff
+  &-item
+    display: flex
+    text-decoration: none
+    margin-top: 12px
+    margin-bottom: 12px
+    overflow: hidden 
+    &__block
+      display: flex
+      padding-left: 14px
+      padding-right: 14px
+      transition: all 0.3s
+      &-fs 
+        padding-top: 50px
+    &__icon
+      display: inline-block
+      margin-right: 10px
+      margin-left: 10px
+      vertical-align: middle
+    & span, path, rect, svg, ellipse
+      transition: all 0.3s
+    &:hover
+      & span, path, rect, svg, ellipse
+        color: #19B5FE
+        fill: #19B5FE
+    &__name 
+      display: inline-block
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      color: #FFFFFE
+      vertical-align: middle
+      transition: all 0.3s
+      white-space: nowrap
+      overflow: hidden
+      &-list
+        cursor: default
+  &-object
+    &__list
+      list-style: none
+      padding-left: 32px
+      height: 155px
+      overflow-y: auto
+      overflow-x: hidden
+      &::-webkit-scrollbar 
+        width: 4px
+        background: #031A30
+        border-radius: 10px
+      &::-webkit-scrollbar-thumb
+        background: #FFFFFF
+        border-radius: 10px
+      & li 
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        padding-bottom: 8px
+        & a
+          color: #466370
+          text-decoration: none 
+          &:hover 
+            color: #19B5FE
+  &-notification
+    &__list
+      list-style: none
+      padding-left: 32px
+      margin-right: 16px
+      overflow: hidden
+      & li 
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        padding-bottom: 8px
+        & a
+          color: #466370
+          text-decoration: none 
+          &:hover 
+            color: #19B5FE
+
+
+
+.sidebar-item:hover
+  & span 
+    color: #19B5FE
+  & path
+    fill: #19B5FE
+  & rect
+    fill: #19B5FE
+
+
+.device__btn
+  cursor: pointer
