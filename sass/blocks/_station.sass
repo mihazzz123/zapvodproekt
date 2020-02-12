@@ -384,3 +384,76 @@
       cursor: pointer
       &:last-child
         padding-left: 26px
+
+
+
+// statiom-new
+
+.statistics
+  &-block
+    &__text
+      padding-right: 50px
+      width: calc(100% - 130px)
+    &__pagination
+      padding-bottom: 0
+      padding-top: 15px
+      & a 
+        margin-left: 0
+        margin-right: 15px
+        &:hover 
+          background: #0B2E3C
+  &-circle
+    width: 125px
+    height: 125px
+    border-radius: 50%
+    background: #0B2B38
+    // border: 7px solid #0B2B38
+    font-size: 32px
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &__before
+      background: #16CEB9
+      top: 0%
+      left: 50%
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 2
+      transform-origin: left center
+      transform: rotate(80deg)
+      &::before
+        content: ""
+        background: #16CEB9
+        width: 8px  
+        height: 8px
+        position: absolute
+        border-radius: 50%
+        bottom: -1px
+        left: -3px
+    &__after
+      background: #16CEB9
+      top: 0
+      left: 50%
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 2
+      &::before
+        content: ""
+        background: #16CEB9
+        width: 8px  
+        height: 8px
+        position: absolute
+        border-radius: 50%
+        top: 0px
+        left: -3px
+    &__text
+      z-index: 5
+    &__bg
+      background-color: #09242f
+      width: calc(100% - 14px)
+      height: calc(100% - 14px)
+      position: absolute
+      border-radius: 50%
+      z-index: 3

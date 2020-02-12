@@ -262,7 +262,7 @@ $(document).ready(function() {
     
       // create a HTML element for each feature
       var el = document.createElement('a');
-      el.setAttribute('href', 'station.html');
+      el.setAttribute('href', 'station_new_1.html');
       el.className = 'main-point';
     
       // make a marker for each feature and add to the map

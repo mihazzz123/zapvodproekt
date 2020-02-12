@@ -419,14 +419,36 @@ input, button, textarea, a {
 .border-none {
   border: none !important; }
 
+.border-1 {
+  border: 1px solid #173440; }
+
 .bg-none {
   background: none !important; }
 
 .w-100 {
-  width: 100%; }
+  width: 100% !important; }
 
 .w-50 {
   width: 49% !important; }
+
+.w-30 {
+  width: 32% !important; }
+
+.px-3 {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.pb-3 {
+  padding-bottom: 15px !important; }
+
+.pb-5 {
+  padding-bottom: 30px !important; }
+
+.mb-3 {
+  margin-bottom: 15px !important; }
+
+.mb-5 {
+  margin-bottom: 30px !important; }
 
 .pagination {
   padding-top: 35px;
@@ -1458,6 +1480,76 @@ input, button, textarea, a {
     cursor: pointer; }
     .date-pagination__item:last-child {
       padding-left: 26px; }
+
+.statistics-block__text {
+  padding-right: 50px;
+  width: calc(100% - 130px); }
+
+.statistics-block__pagination {
+  padding-bottom: 0;
+  padding-top: 15px; }
+  .statistics-block__pagination a {
+    margin-left: 0;
+    margin-right: 15px; }
+    .statistics-block__pagination a:hover {
+      background: #0B2E3C; }
+
+.statistics-circle {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #0B2B38;
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; }
+  .statistics-circle__before {
+    background: #16CEB9;
+    top: 0%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg); }
+    .statistics-circle__before::before {
+      content: "";
+      background: #16CEB9;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      border-radius: 50%;
+      bottom: -1px;
+      left: -3px; }
+  .statistics-circle__after {
+    background: #16CEB9;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2; }
+    .statistics-circle__after::before {
+      content: "";
+      background: #16CEB9;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      border-radius: 50%;
+      top: 0px;
+      left: -3px; }
+  .statistics-circle__text {
+    z-index: 5; }
+  .statistics-circle__bg {
+    background-color: #09242f;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 3; }
 
 .profile-title {
   color: #466370;
