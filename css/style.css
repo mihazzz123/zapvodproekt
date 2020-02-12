@@ -899,18 +899,21 @@ input, button, textarea, a {
       flex-wrap: nowrap; }
   .main-point {
     border-radius: 50%;
-    position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
+    -webkit-transition: -webkit-box-shadow 0.5s;
+    transition: -webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
     background: -webkit-gradient(linear, left top, left bottom, from(#7DCE7F), to(#44B446));
     background: linear-gradient(180deg, #7DCE7F 0%, #44B446 100%);
-    left: 31%;
-    top: 57%;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
     -webkit-transform: scale(1);
-            transform: scale(1); }
+            transform: scale(1);
+    cursor: pointer; }
     .main-point_active {
+      -webkit-animation: animPoint 0.5s ease-in-out 0.1s infinite alternate;
+              animation: animPoint 0.5s ease-in-out 0.1s infinite alternate; }
+    .main-point:hover {
       -webkit-transform: scale(1.1);
               transform: scale(1.1);
       -webkit-box-shadow: 0 0 3px 1px #7DCE7F;
@@ -934,7 +937,6 @@ input, button, textarea, a {
     background-position: center center;
     position: relative; }
     .main-bg_1 {
-      background-image: url(../img/main_1.png);
       width: 100%;
       height: 550px; }
     .main-bg_2 {
@@ -948,7 +950,8 @@ input, button, textarea, a {
     width: 360px;
     background: #010911;
     border-radius: 4px;
-    padding: 15px 15px 25px 15px; }
+    padding: 15px 15px 25px 15px;
+    z-index: 6; }
     .main-block__btn {
       font-weight: 400;
       display: block;
@@ -1037,6 +1040,29 @@ input, button, textarea, a {
   .info-data {
     width: auto;
     max-width: 77%; } }
+
+#map, #map2 {
+  height: 550px;
+  z-index: 0; }
+
+.mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-bottom-left {
+  display: none; }
+
+@-webkit-keyframes animPoint {
+  0% {
+    -webkit-box-shadow: 0 0 -1px -1px #7DCE7F;
+            box-shadow: 0 0 -1px -1px #7DCE7F; }
+  100% {
+    -webkit-box-shadow: 0 0 3px 1px #7DCE7F;
+            box-shadow: 0 0 3px 1px #7DCE7F; } }
+
+@keyframes animPoint {
+  0% {
+    -webkit-box-shadow: 0 0 -1px -1px #7DCE7F;
+            box-shadow: 0 0 -1px -1px #7DCE7F; }
+  100% {
+    -webkit-box-shadow: 0 0 3px 1px #7DCE7F;
+            box-shadow: 0 0 3px 1px #7DCE7F; } }
 
 .station-title {
   font-size: 24px;

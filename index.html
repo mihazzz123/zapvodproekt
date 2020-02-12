@@ -7,6 +7,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
 
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -433,7 +436,6 @@
       <div class="main-slide main-slide_1 flex-col">
         <span class="main-title block">Мониторинг ГТС</span>
         <div class="main-bg main-bg_1">
-          <a href="station.html" class="main-point"></a>
           <div class="main-block main-block_1 flex-col">
             <span class="main-block__title flex">Характерситики устройства</span>
             <span class="info-data__col-title main-block__val flex">Устройство: <span class="color-1">1</span></span>
@@ -442,6 +444,10 @@
             <textarea disabled class="main-textarea info-data__col-title block">Все ок</textarea>
             <a href="station.html" class="main-block__btn color-1">Перейти</a>
           </div>
+
+          <div id='map'></div>
+
+    
         </div>
       </div>
       <div class="main-slide main-slide_2 flex-col">
@@ -453,6 +459,7 @@
             <span class="info-data__col-title main-block__val-sec flex"><span></span>Повышенный</span>
             <span class="info-data__col-title main-block__val-sec flex"><span></span>Критический</span>
           </div>
+          <div id='map2'></div>
         </div>
       </div>
     </div>

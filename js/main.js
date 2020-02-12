@@ -224,37 +224,64 @@ $(document).ready(function() {
     $(this).find('.check').addClass('check_active');
   });
 
-  $('.main-point').on('mouseenter', function() {
-    $('.main-block_1').addClass('main-block_active');
-    idIntervals = setInterval(() => {
-      $(this).toggleClass('main-point_active');
-    }, 400);
-    clearTimeout(idTimeout);
-  });
-  $('.main-block_1').on('mouseenter', function() {
-    $(this).addClass('main-block_active');
-    clearTimeout(idTimeout);
-    idIntervals = setInterval(() => {
-      $('.main-point').toggleClass('main-point_active');
-    }, 400);
-  });
-  $('.main-point').on('mouseleave', function() {
-    clearInterval(idIntervals);
-    $(this).removeClass('main-point_active');
-    idTimeout = setTimeout(() => {
-      $('.main-block_1').removeClass('main-block_active');
-    }, 3000);
-  });
-  $('.main-block_1').on('mouseleave', function() {
-    $(this).addClass('main-block_active');
-    idTimeout = setTimeout(() => {
-      $('.main-block_1').removeClass('main-block_active');
-    }, 3000);
-    clearInterval(idIntervals);
-    $('.main-point').removeClass('main-point_active');
-  });
 
-});
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWloYXp6ejEyMyIsImEiOiJjazZodXNqMWIyaHVqM2ttZzEwYjd1OXY3In0.2_2_BBKmVdgfrKFVq0RKeg';
+            
+    var map = new mapboxgl.Map({
+      container: 'map2',
+      style: 'mapbox://styles/mihazzz123/ck6i1me3d142o1inq2ye8o7k2',
+      center: [20.503951, 54.717007],
+      zoom: 7
+    });
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mihazzz123/ck6i1me3d142o1inq2ye8o7k2',
+      center: [20.503951, 54.717007],
+      zoom: 7
+    });
+    
+    var geojson = {
+      type: 'FeatureCollection',
+      features: [{
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [20.494159, 54.717765]
+        },
+        properties: {
+          title: 'Mapbox',
+          description: 'Washington, D.C.'
+        }
+      },
+      ]
+    };
+    
+    
+    geojson.features.forEach(function(marker) {
+    
+      // create a HTML element for each feature
+      var el = document.createElement('a');
+      el.setAttribute('href', 'station.html');
+      el.className = 'main-point';
+    
+      // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+    });
+
+    
+    $('.main-point').on('mouseenter', function() {
+      $('.main-block_1').addClass('main-block_active');
+        $(this).addClass('main-point_active');
+    });
+    $('.mapboxgl-canvas').on('mousedown', function() {
+      $('.main-block_1').removeClass('main-block_active');
+      $('.main-point').removeClass('main-point_active');
+    });
+
+  });
 
 /* Charts */
 window.chartConfig = {};
@@ -330,3 +357,5 @@ function chartUpdate() {
   window.mChartObj.data = window.chartConfig.data;
   window.mChartObj.update();
 }
+
+
